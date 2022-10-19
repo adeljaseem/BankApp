@@ -1,0 +1,42 @@
+ 
+ <!-- As a link -->
+ <nav class="navbar navbar-light " >
+    <a class="navbar-brand  " href="#" style="color:aqua"><b>&#169; HAFC Bank Pvt.Ltd </b></a>
+    <span class="quote text-light">Giving you freedom...</span>
+    <h6 style="color: white;">{{aim}}</h6>
+  </nav>
+  
+  
+  <div class="container col-md-12 mt-0">
+      <div class="d-flex justify-content-center h-100">
+          <div class="card">
+              <div class="card-header">
+                  <h3 class="text-center">Sign In</h3>
+                  
+              </div>
+              <div class="card-body">
+                  <form [formGroup]="loginForm" (ngSubmit)="login()">
+                      <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          <input name="acno" formControlName="acno" type="text" class="form-control" placeholder="account number" id="login_accno" required>
+                      </div>
+                      <div *ngIf="this.loginForm.get('acno')?.touched&&this.loginForm.get('acno')?.errors" style="color: rgb(255, 0, 0);">Invalid Account Number</div>
+
+                      <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-key"></i></span>
+                          </div>
+                          <input name="pswd" formControlName="pswd" type="password" class="form-control" placeholder="password" id="login_password" required>
+                      </div>
+                      <div *ngIf="this.loginForm.get('pswd')?.touched&&this.loginForm.get('pswd')?.errors" style="color: rgb(255, 0, 0);">Invalid Password</div>
+                      <div class="form-group">
+                          <input  type="submit" value="Login" class="btn float-right login_btn " style="width:50%" >
+                      </div>
+                  </form>
+              </div>
+              <p style="color:white;align-items:baseline;">Not a user? <a id="a6" routerLink="register">Register</a></p>
+          </div>
+      </div>
+  </div>

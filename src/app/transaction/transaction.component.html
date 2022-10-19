@@ -1,0 +1,37 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light " style="font-size: 15px;">
+    <a class="navbar-brand  " href="#" style="color:aqua;"><b style="font-size: 15px;"> HAFC Bank Pvt.Ltd
+        </b></a>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active ">
+                <a id="a7" class="nav-link " routerLink="/dashboard">Home</a>
+            </li>
+            <!-- <li class="nav-item active ">
+                <a class="nav-link text-primary " routerLink=""><i class="fa fa-power-off fa-lg "></i></a>
+            </li> -->
+
+        </ul>
+
+    </div>
+</nav>
+<h1 style="color: white; text-align: center;">Transaction History</h1>
+
+
+      <div id="a1" class="container content-justify-center w-50 h-50">
+            <table class="table table-bordered table-secondary table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of transaction">
+                        <td>{{t.type}}</td>
+                        <td>{{t.amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+      </div>

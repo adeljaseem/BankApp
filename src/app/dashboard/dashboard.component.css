@@ -1,0 +1,13 @@
+.card {
+    height: 300px;
+    width: 500px;
+}
+
+.container {
+    height: 45%;
+}
+#s1{
+    margin-left: 500px;
+    font-weight: bold;
+    font-size: large;
+}
